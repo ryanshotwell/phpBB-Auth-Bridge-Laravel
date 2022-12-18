@@ -1,0 +1,9 @@
+services:
+  auth.provider.laravel:
+    class: ryanshotwell\phpbbbridgelaravel\auth\provider\laravel_auth_bridge
+    arguments:
+      - '@dbal.conn'
+      - '@passwords.manager'
+      - '@request'
+    tags:
+      - { name: auth.provider }
